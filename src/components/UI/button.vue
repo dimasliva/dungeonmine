@@ -1,5 +1,7 @@
 <template>
-    <button>Get craft</button>
+    <button>
+        <slot></slot>
+    </button>
 </template>
 
 <script>

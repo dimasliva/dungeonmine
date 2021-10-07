@@ -1,15 +1,22 @@
 <template>
   <div>
-    <home-page/>
+    <home-page :posts="posts"/>
   </div>
 
 </template>
 
 <script>
-
-import HomePage from "./pages/HomePage";
+import HomePage from "@/pages/HomePage";
 export default {
-  components: { HomePage}
+  components: {HomePage},
+  data() {
+    return {
+      posts: [
+        {id: 1, title: "Welcome to minecraft", desc: "Get any crafts", btn: "Get craft", url: 'https://clck.ru/Y3gps'},
+        {id: 2, title: "Explore minecraft games", desc: "Get any penis", btn: "Get chlen", url: 'https://clck.ru/Y3gzR'},
+      ]
+    }
+  }
 }
 </script>
 
@@ -21,9 +28,9 @@ export default {
   }
   body{
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
-    background: url("https://clck.ru/Y2PSh"), rgba(0,0,0,0.5);
+    background-image: url("https://clck.ru/Y2PSh");
+    position: relative;
   }
   body:before {
     position: absolute;
