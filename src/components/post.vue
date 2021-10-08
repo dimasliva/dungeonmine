@@ -1,17 +1,18 @@
 <template>
-    <div class="header">
         <div
+                :style="{backgroundImage: `url(${post.url})`,}"
                 v-for="post in posts"
                 :key="post.id"
-                :style="{backgroundImage: `url(${post.url})`,}"
-                class="header__content" >
-            <h3>{{post.title}}</h3>
-            <p>{{post.desc}}</p>
-            <my-button :posts="posts">
-                {{post.btn}}
-            </my-button>
+                class="heroimg"
+        >
+            <div class="slider-left">
+                <h3>{{post.title}}</h3>
+                <p>{{post.desc}}</p>
+                <my-button :posts="posts">
+                    {{post.btn}}
+                </my-button>
+            </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -37,31 +38,32 @@
 </script>
 
 <style scoped>
-    .header {
-        width: 1200px;
-        height: 1500px;
-        margin: auto;
-        display: block;
-        position: relative;
+    .container {
 
     }
-    .header__content {
+    .heroimg {
+        width: 100%;
+        height: 500px;
+        position: relative;
         display: flex;
         flex-direction: column;
-        height: 700px;
-        margin-bottom: 50px;
+        background-position-x: center;
         background-size: cover;
-        color: white;
-        font-family: Aharoni;
-        padding-top: 20%;
-        padding-left: 10%;
-        z-index: 1;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
     }
-    .header__content>h3 {
-
+    .slider-left {
+        margin-top: 100px;
+        margin-left: 100px;
+        width: 540px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Futura Md BT";
+    }
+    .slider-left>h3 {
         font-size: 40px;
     }
-    .header__content>p {
+    .slider-left>p {
         font-size: 18px;
         line-height: 40px;
     }
