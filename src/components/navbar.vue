@@ -3,15 +3,15 @@
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <a href="/"><img class="nav__list__logo" :src="img"/></a>
+                    <router-link to="/">
+                        <a>
+                            <img class="nav__list__logo" :src="img"/>
+                        </a>
+                    </router-link>
+
                 </div>
                 <ul class="nav__list">
-                    <li class="nav__list__li">
-                        <my-li :links="links"/>
-                    </li>
-                    <li class="nav__list__li">
-
-                    </li>
+                    <my-li :links="links"/>
                 </ul>
             </nav>
         </div>
@@ -21,6 +21,7 @@
 
 <script>
     import MyLi from "./UI/li";
+
     export default {
         name: "my-navbar",
         components: {MyLi},
@@ -28,8 +29,17 @@
             return {
                 img: "https://i.pinimg.com/originals/2c/45/ab/2c45abc15f5b4b9fb0c68e57395e1849.png",
                 links: [
-                    {imgGif: 'https://clck.ru/Y5Nqt', imgStatic: 'https://clck.ru/NbMpq', title: 'Home'}
-                ]
+                    {
+                        id: 1, imgGif: 'https://clck.ru/Y5Nqt', imgStatic: 'https://clck.ru/NbMpq',
+                        title: 'Craft', active: false, routerTo: '/crafts'
+                    },
+                    {
+                        id: 2, imgGif: 'https://clck.ru/Y6csR', imgStatic: 'https://clck.ru/Y6cuD',
+                        title: 'About', active: false, routerTo: '/about',
+
+                    }
+                ],
+                homepage: '/'
             }
         }, methods: {}
     }
@@ -40,7 +50,6 @@
         position: relative;
         z-index: 2;
     }
-
     .container {
         display: flex;
         justify-content: center;
@@ -74,11 +83,17 @@
     .logo {
         width: 235px;
         float: left;
+        transition: .3s ease-in-out;
+        transform: scale(1, 1);
     }
 
     .logo img {
         width: 265px;
         max-width: 100%;
+    }
+
+    .logo:hover {
+        transform: scale(1.2, 1.2);
     }
 
     .nav__list {
@@ -88,15 +103,5 @@
         align-items: center;
         color: white;
     }
-
-    .nav__list__li {
-        position: relative;
-        list-style: none;
-        font-size: 22px;
-        font-family: "Arial Black";
-    }
-
-
-
 
 </style>

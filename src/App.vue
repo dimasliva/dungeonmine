@@ -1,31 +1,20 @@
 <template>
-    <home-page :posts="posts"/>
+    <my-navbar/>
+    <div class="app">
+        <router-view>
+        </router-view>
+    </div>
 
 </template>
 
 <script>
-    import HomePage from "@/pages/HomePage";
 
+    import MyNavbar from "./components/navbar";
     export default {
-        components: {HomePage},
+        components: {MyNavbar},
         data() {
             return {
-                posts: [
-                    {
-                        id: 1,
-                        title: "Welcome to minecraft",
-                        desc: "Get any crafts",
-                        btn: "Get craft",
-                        url: 'https://clck.ru/Y3gps'
-                    },
-                    {
-                        id: 2,
-                        title: "Explore minecraft games",
-                        desc: "Get any penis",
-                        btn: "Get chlen",
-                        url: 'https://clck.ru/Y3gzR'
-                    },
-                ]
+
             }
         }
     }
@@ -39,20 +28,12 @@
     }
 
     body {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("https://clck.ru/Y2PSh");
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+        background-image: url("./assets/background.jpg");
         position: relative;
-    }
-
-    body:before {
-        position: absolute;
-        content: "";
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: -1;
+        height: 100vh;
     }
 </style>

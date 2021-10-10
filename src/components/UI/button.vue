@@ -1,6 +1,6 @@
 <template>
     <button>
-        <slot></slot>
+            <slot></slot>
     </button>
 </template>
 
@@ -15,15 +15,12 @@
         color: white;
         font-size: 30px;
         border: none;
-        background: #7ed41a;
         font-weight: bold;
         align-self: start;
         padding: 10px 30px;
         margin-top: 20px;
         cursor: pointer;
         transition: .3s all;
-    }
-    button:hover {
-        background: #67af0f;
+        border-radius: 5px;
     }
 </style>
