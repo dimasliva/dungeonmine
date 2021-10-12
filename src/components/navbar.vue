@@ -53,12 +53,12 @@
     .container {
         display: flex;
         justify-content: center;
-        max-width: 1200px;
         min-width: 320px;
         background-image: url("http://3.bp.blogspot.com/-i4ig21EjOq8/VhJA4Ac6tEI/AAAAAAAAARA/XMbJg5iixHI/s1600/Block%2Bof%2BCobblestone%2B1.png");
         background-size: contain;
         margin: 0px auto;
         padding: 0;
+        width: 100%;
     }
 
     .container:after {
@@ -72,6 +72,7 @@
     }
 
     .nav {
+        max-width: 1200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
