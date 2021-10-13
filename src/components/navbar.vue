@@ -30,11 +30,13 @@
                 img: "https://i.pinimg.com/originals/2c/45/ab/2c45abc15f5b4b9fb0c68e57395e1849.png",
                 links: [
                     {
-                        id: 1, imgGif: 'https://clck.ru/Y5Nqt', imgStatic: 'https://clck.ru/NbMpq',
+                        id: 1, imgGif: 'https://i.pinimg.com/originals/e5/3b/74/e53b7448d653e93d37bbaeda27779868.gif',
+                        imgStatic: 'https://cdn.pixabay.com/photo/2016/11/11/14/49/minecraft-1816996_1280.png',
                         title: 'Craft', active: false, routerTo: '/crafts'
                     },
                     {
-                        id: 2, imgGif: 'https://clck.ru/Y6csR', imgStatic: 'https://clck.ru/Y6cuD',
+                        id: 2, imgGif: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/03969d5e-2dc8-44dd-8ca7-04ee376f78cc/d9wif33-c0ee1c05-a595-4544-bf64-c40d033b9682.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAzOTY5ZDVlLTJkYzgtNDRkZC04Y2E3LTA0ZWUzNzZmNzhjY1wvZDl3aWYzMy1jMGVlMWMwNS1hNTk1LTQ1NDQtYmY2NC1jNDBkMDMzYjk2ODIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HRoySo39pk6u9iKyYGDAQJJSW2DVI4qB8eJP_5GobCQ',
+                        imgStatic: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/03969d5e-2dc8-44dd-8ca7-04ee376f78cc/d9wif33-678f70fb-be1f-4b11-a1c8-bd0ecc9dd1d6.png/v1/fill/w_360,h_360,strp/endstone_by_odnetnini_d9wif33-fullview.png',
                         title: 'About', active: false, routerTo: '/about',
 
                     }
