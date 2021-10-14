@@ -1,33 +1,50 @@
 <template>
     <div class="about_page">
         <div class="container">
-            <div class="header">
-                <span class="title">
-                    <h1 class="title_welcome">WELCOME TO THE PAGE <span>ABOUT ME</span></h1>
-                    <p class="desc">
-                        On this page you will find information about
-                        my projects, what frameworks I use and
-                        what programming languages I know.
-                    </p>
-                </span>
-            </div>
+            <!--      Header      -->
+            <about-header/>
+            <!--      Navbar      -->
             <div class="nav-menu">
                 <nav class="scroll">
                     <ul id="nav-menu">
-                        <li class="list_item"><a href="Language">Programming language</a></li>
+                        <li class="list_item"><a href="language">Programming language</a></li>
                         <li class="list_item"><a href="Frameworks">Frameworks</a></li>
                         <li class="list_item"><a href="Projects">Projects</a></li>
                         <li class="list_item"><a href="Social">Social</a></li>
                     </ul>
                 </nav>
             </div>
+            <!--      News      -->
+            <div class="language">
+                <section class="bgLanguage">
+                    <h1>Programming Language</h1>
+                    <div class="slider">
+                        <button class="click-prev"></button>
+                        <v-carousel :carousel_data="sliderItem"/>
+
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+    import AboutHeader from "../components/aboutPage/aboutHeader";
+    import VCarousel from "../components/aboutPage/slider/v-carousel";
+
     export default {
-        name: "about-page"
+        name: "about-page",
+        components: { VCarousel, AboutHeader},
+        data() {
+            return {
+                sliderItem: [
+                    {id: 1, name: 'img1', img: 'js.png'},
+                    {id: 2, name: 'img2', img: 'js.png'},
+                    {id: 3, name: 'img3', img: 'js.png'},
+                ]
+            }
+        }
     }
 </script>
 
@@ -36,68 +53,20 @@
         max-width: 1200px;
         margin: 0 auto;
     }
-
     .container {
         position: relative;
         display: flex;
         flex-direction: column;
     }
-
-    .header {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 600px;
-        background-size: cover;
-        background-position: center;
-        background-image: url("https://sm.ign.com/t/ign_ap/review/s/super-smas/super-smash-bros-ultimate-dlc-review-minecraft-steve_twjf.1200.jpg");
-        background-repeat: no-repeat;
-    }
-
-    .title {
-        color: white;
-        font-family: Arial;
-        position: relative;
-        width: 450px;
-        height: 300px;
-        margin: 0 auto;
-        margin-top: 300px;
-    }
-
-    .title_welcome {
-        width: 100%;
-        margin: 0 auto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 65px;
-        text-align: center;
-        color: white;
-
-    }
-
-    .title_welcome > span {
-        color: #fcdd3a;
-        width: 100%;
-        font-size: 82px;
-    }
-
-    .desc {
-        width: 100%;
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 33px;
-        text-align: center;
-        font-weight: bold;
-    }
     .nav-menu {
         background-color: white;
         width: 100%;
         height: 76px;
-        text-align: center;
-        box-shadow: 0px 0px 10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 5px 0px 0px lightgray;
+        z-index: 1;
     }
     .scroll {
 
@@ -111,11 +80,21 @@
         margin: 0px 10px;
     }
     .list_item > a {
+        margin-right: 48px;
+        padding: 8px 12px;
         text-decoration: none;
         color: black;
         font-weight: bold;
         text-transform: uppercase;
         font-family: "Noto Sans";
         font-size: 14px;
+    }
+    .language {
+        width: 100%;
+        background-color: #ececec;
+        height: 600px;
+    }
+    .bgLanguage {
+
     }
 </style>

@@ -61,6 +61,7 @@
         margin: 0px auto;
         padding: 0;
         width: 100%;
+
     }
 
     .container:after {
