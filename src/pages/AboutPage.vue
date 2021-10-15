@@ -7,21 +7,25 @@
             <div class="nav-menu">
                 <nav class="scroll">
                     <ul id="nav-menu">
-                        <li class="list_item"><a href="language">Programming language</a></li>
-                        <li class="list_item"><a href="Frameworks">Frameworks</a></li>
-                        <li class="list_item"><a href="Projects">Projects</a></li>
-                        <li class="list_item"><a href="Social">Social</a></li>
+                        <li class="list_item"><a href="#language">Programming language</a></li>
+                        <li class="list_item"><a href="#frameworks">Frameworks</a></li>
+                        <li class="list_item"><a href="#projects">Projects</a></li>
+                        <li class="list_item"><a href="#social">Social</a></li>
                     </ul>
                 </nav>
             </div>
             <!--      News      -->
             <div class="language">
-                <section class="bgLanguage">
-                    <h1>Programming Language</h1>
+                <section class="bgLanguage" id="language">
+                    <h1 >Programming Language</h1>
                     <div class="slider">
-                        <button class="click-prev"></button>
-                        <v-carousel :carousel_data="sliderItem"/>
-
+                        <v-carousel :carousel_data="laguages" :interval="2000"/>
+                    </div>
+                </section>
+                <section class="bgLanguage" >
+                    <h1 id="frameworks">Frameworks</h1>
+                    <div class="slider" >
+                        <v-carousel :carousel_data="frameworks" :interval="2000" />
                     </div>
                 </section>
             </div>
@@ -38,10 +42,17 @@
         components: { VCarousel, AboutHeader},
         data() {
             return {
-                sliderItem: [
+                laguages: [
                     {id: 1, name: 'img1', img: 'js.png'},
-                    {id: 2, name: 'img2', img: 'js.png'},
-                    {id: 3, name: 'img3', img: 'js.png'},
+                    {id: 2, name: 'img2', img: 'typescript.png'},
+                    {id: 3, name: 'img3', img: 'Java.png'},
+                ],
+                frameworks: [
+                    {id: 1, name: 'img1', img: 'vue.jpeg'},
+                    {id: 2, name: 'img2', img: 'express.jpg'},
+                    {id: 3, name: 'img3', img: 'jest.png'},
+                    {id: 4, name: 'img4', img: 'electron.png'},
+                    {id: 5, name: 'img5', img: 'spring.png'},
                 ]
             }
         }
@@ -89,12 +100,25 @@
         font-family: "Noto Sans";
         font-size: 14px;
     }
+    .slider {
+        width: 500px;
+        margin:auto;
+    }
     .language {
         width: 100%;
         background-color: #ececec;
-        height: 600px;
+        height: 100%;
+        padding-bottom: 100px;
     }
     .bgLanguage {
-
+        width: 100%;
+        margin: auto;
+        padding-top: 80px;
+        text-align: center;
+    }
+    .bgLanguage > h1 {
+        font-family: Arial;
+        padding-bottom: 20px;
+        font-size: 26px;
     }
 </style>

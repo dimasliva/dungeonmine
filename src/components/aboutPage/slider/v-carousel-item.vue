@@ -17,8 +17,13 @@
 </script>
 
 <style scoped>
-    .v-carousel-item img {
-        width: 230px;
-        margin: 0px 10px;
+    .v-carousel-item {
     }
+    .v-carousel-item img{
+        width: 400px;
+        object-fit: cover;
+
+        height: 406px;
+    }
+
 </style>
