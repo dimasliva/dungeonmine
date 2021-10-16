@@ -68,7 +68,6 @@
             prevSlide() {
                 if(this.currentSlideIndex > 0) {
                     this.currentSlideIndex--;
-                    console.log(this.currentSlideIndex)
                 }
 
             },
@@ -78,7 +77,6 @@
                 } else {
                     this.currentSlideIndex++;
                 }
-                console.log(this.currentSlideIndex)
             },
         },
         mounted() {
