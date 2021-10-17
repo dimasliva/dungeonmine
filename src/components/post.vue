@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div :style="{
-            backgroundImage: `url(${post.url})`,
+            backgroundImage: 'url(' + require('@/assets/' + post.url) + ')',
             marginBlock: `${post.marginBottom}`,
             width: `${post.width}`,
             height: `${post.height}`,
